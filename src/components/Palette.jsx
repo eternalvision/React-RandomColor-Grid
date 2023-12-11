@@ -16,7 +16,6 @@ export const Palette = (props) => {
     } = props;
     const [width, height] = useWindowSize();
     const itemsCount = calculateItemsCount(width, height, 50, 50);
-
     const items = new Array(itemsCount).fill(null);
     return (
         <ul className="PaletteList">
