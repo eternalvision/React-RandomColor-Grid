@@ -1,6 +1,4 @@
-### Project Overview
-
-#### Introduction
+# **React ([Vite](https://vitejs.dev/)) Random Color Grid**
 
 This project creates a dynamic and visually appealing color palette using React. It showcases the use of custom hooks to manage state and react to environmental changes, like window resizing. The palette is composed of multiple colored items that change their colors at regular intervals, creating a lively and colorful display.
 
