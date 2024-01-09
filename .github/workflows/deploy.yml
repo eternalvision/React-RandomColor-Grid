@@ -36,25 +36,24 @@ jobs:
               run: npm run build
 
             - name: Check Dist Directory After Build
-            run: |
-              if [[ -d "dist" ]]; then
-                echo "Dist directory exists after build"
-                ls -la dist
-              else
-                echo "Dist directory does not exist after build"
-                exit 1
-              fi
-
+              run: |
+                  if [[ -d "dist" ]]; then
+                    echo "Dist directory exists after build"
+                    ls -la dist
+                  else
+                    echo "Dist directory does not exist after build"
+                    exit 1
+                  fi
 
             - name: Push to dev branch
               run: |
-                git config --local user.email "action@github.com"
-                git config --local user.name "GitHub Action"
-                git checkout -B dev
-                git add -f ./dist || echo "Failed to add dist"
-                git commit -m "Add dist" || echo "No changes to commit"
-                git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/eternalvision/ReactRandomColorGrid.git
-                git push -u origin dev --force || echo "Failed to push"
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git checkout -B dev
+                  git add -f ./dist || echo "Failed to add dist"
+                  git commit -m "Add dist" || echo "No changes to commit"
+                  git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/eternalvision/ReactRandomColorGrid.git
+                  git push -u origin dev --force || echo "Failed to push"
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
