@@ -3,11 +3,7 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 const Item = React.memo(({ color }) => {
-    return (
-        <li style={{ backgroundColor: color }}>
-            <span></span>
-        </li>
-    );
+    return <li style={{ backgroundColor: color }}></li>;
 });
 
 Item.propTypes = {
