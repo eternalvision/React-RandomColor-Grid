@@ -26,84 +26,12 @@ li {
     list-style: none;
 }
 
-@keyframes SpanSize {
-    0% {
-        width: 0px;
-        height: 0px;
-    }
-    20% {
-        width: 0px;
-        height: 0px;
-    }
-    40% {
-        width: 10px;
-        height: 10px;
-    }
-    60% {
-        width: 20px;
-        height: 20px;
-    }
-    80% {
-        width: 30px;
-        height: 30px;
-    }
-    100% {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@keyframes PaletteTransform {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    20% {
-        transform: rotateX(25deg) rotateY(40deg);
-    }
-    40% {
-        transform: rotateX(30deg) rotateY(-55deg);
-    }
-    60% {
-        transform: rotateX(-50deg) rotateY(-70deg);
-    }
-    80% {
-        transform: rotateX(-40deg) rotateY(-33deg);
-    }
-    100% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-}
-
-@keyframes PaletteItemTransform {
-    0% {
-        transform: rotateX(25deg) rotateY(20deg);
-    }
-    20% {
-        transform: rotateX(50deg) rotateY(36deg);
-    }
-    40% {
-        transform: rotateX(-40deg) rotateY(-55deg);
-    }
-    60% {
-        transform: rotateX(-20deg) rotateY(-11deg);
-    }
-    80% {
-        transform: rotateX(-20deg) rotateY(-10deg);
-    }
-    100% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-}
-
 .PaletteList {
     @include Center;
     flex-wrap: wrap;
     filter: blur(1px);
     gap: 1px;
-    // animation: PaletteTransform 60s ease-in-out 0s infinite alternate;
     li {
-        // animation: PaletteItemTransform 60s ease-in-out 0s infinite alternate;
-
         border-radius: 5px;
         width: 29px;
         height: 29px;
