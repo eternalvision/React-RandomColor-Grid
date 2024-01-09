@@ -2,8 +2,7 @@ import React from "react";
 
 import { PropTypes } from "prop-types";
 
-const Item = React.memo(({ useRandomColor }) => {
-    const color = useRandomColor();
+const Item = React.memo(({ color }) => {
     return (
         <li style={{ backgroundColor: color }}>
             <span></span>
@@ -11,19 +10,23 @@ const Item = React.memo(({ useRandomColor }) => {
     );
 });
 
+Item.propTypes = {
+    color: PropTypes.string.isRequired,
+};
+
 Item.displayName = "Item";
 
 export const Palette = (props) => {
     const {
-        Hooks: { useWindowSize, calculateItemsCount, useRandomColor },
+        Hooks: { useWindowSize, calculateItemsCount, useRandomColors },
     } = props;
     const [width, height] = useWindowSize();
-    const itemsCount = calculateItemsCount(width, height, 50, 50);
-    const items = new Array(itemsCount).fill(null);
+    const itemsCount = calculateItemsCount(width, height, 30, 30);
+    const colors = useRandomColors(itemsCount);
     return (
         <ul className="PaletteList">
-            {items.map((_, index) => (
-                <Item useRandomColor={useRandomColor} key={index} />
+            {colors.map((color, index) => (
+                <Item color={color} key={index} />
             ))}
         </ul>
     );

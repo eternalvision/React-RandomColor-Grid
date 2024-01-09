@@ -4,8 +4,6 @@
   font-family: sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
 }
 
 html,
@@ -203,15 +201,11 @@ li {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   gap: 1px;
-  -webkit-animation: PaletteTransform 60s ease-in-out 0s infinite alternate;
-          animation: PaletteTransform 60s ease-in-out 0s infinite alternate;
 }
 .PaletteList li {
-  -webkit-animation: PaletteItemTransform 60s ease-in-out 0s infinite alternate;
-          animation: PaletteItemTransform 60s ease-in-out 0s infinite alternate;
-  border-radius: 0px;
-  width: 49px;
-  height: 49px;
+  border-radius: 5px;
+  width: 29px;
+  height: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

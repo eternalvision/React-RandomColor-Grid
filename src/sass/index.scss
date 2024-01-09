@@ -3,7 +3,6 @@
     padding: 0;
     font-family: sans-serif;
     transition: 0.5s;
-    transition-timing-function: ease;
 }
 
 html,
@@ -101,13 +100,13 @@ li {
     flex-wrap: wrap;
     filter: blur(1px);
     gap: 1px;
-    animation: PaletteTransform 60s ease-in-out 0s infinite alternate;
+    // animation: PaletteTransform 60s ease-in-out 0s infinite alternate;
     li {
-        animation: PaletteItemTransform 60s ease-in-out 0s infinite alternate;
+        // animation: PaletteItemTransform 60s ease-in-out 0s infinite alternate;
 
-        border-radius: 0px;
-        width: 49px;
-        height: 49px;
+        border-radius: 5px;
+        width: 29px;
+        height: 29px;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -43,7 +43,7 @@ jobs:
                   git checkout -B dev
                   git add -f ./dist
                   git commit -m "Add dist" || echo "No changes to commit"
-                  git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/eternalvision/ReactRandomColorGrid.git
+                  git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/eternalvision/React-RandomColor-Grid.git
                   git push -u origin dev --force || true
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
