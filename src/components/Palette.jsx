@@ -1,14 +1,17 @@
+import React from "react";
+
 import { PropTypes } from "prop-types";
 
-const Item = ({ useRandomColor }) => {
+const Item = React.memo(({ useRandomColor }) => {
     const color = useRandomColor();
     return (
-        <li
-            style={{
-                backgroundColor: color,
-            }}></li>
+        <li style={{ backgroundColor: color }}>
+            <span></span>
+        </li>
     );
-};
+});
+
+Item.displayName = "Item";
 
 export const Palette = (props) => {
     const {
